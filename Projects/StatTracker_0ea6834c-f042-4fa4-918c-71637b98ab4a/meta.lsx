@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="0ea6834c-f042-4fa4-918c-71637b98ab4a" type="23" />
+            <attribute id="Name" value="StatTracker" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="db7ca778-b5d4-40b7-9c2e-0dbed77df992" type="23" />
+        </node>
+    </region>
+</save>
