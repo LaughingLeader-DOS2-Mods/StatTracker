@@ -1,0 +1,24 @@
+Key	Content	Handle
+LLSTATS_GeneralStats_DisplayName	General	h124117afgc73cg4695g8c47g8e117934d624
+LLSTATS_GeneralStats_Description	Various general stats (combat, stealing, etc).<br>(<font color='#77FF33'>Stat Tracker</font>).	hd4458c6cg0344g4131gb180g41f8c8b838fe
+LLSTATS_CrimeStats_DisplayName	Crimes	hbf890470g5217g43a4ga723g62156f51cfa4
+LLSTATS_CrimeStats_Description	Crime-related stats.<br>(<font color='#77FF33'>Stat Tracker</font>).	hb1630d06g9258g4c7bg9b3ega4a2f81dc907
+LLSTATS_Kills_DisplayName	Kills	h7993e96dg04e4g4915gbe6dg4b15f2f0e807
+LLSTATS_Kills_Description	Total number of kills made by this character in combat, either directly or or indrectly through summons, surfaces, and so on.	h9523102eg423ag444dga739g54e12bd01d76
+LLSTATS_Deaths_DisplayName	Deaths	h6948915cg76c9g49aeg8d00g104dbec16176
+LLSTATS_Deaths_Description	Total number of times this character has died.	h0a65d378g1766g4240g9c90g8a70589f3db4
+LLSTATS_TotalDamage_DisplayName	Total Damage	h70047856g8438g458dga41ag812d15597605
+LLSTATS_TotalDamage_Description	Total damage done over the course of the game.	h26ed2711ga5c9g4057ga69ag7e82ca057b3e
+LLSTATS_LargestHit_DisplayName	Largest Single Hit	hdb8f4cebg4a12g4865g96aeg34b8f8afe0d0
+LLSTATS_LargestHit_Description	The most damage dealt in a single hit.	h8b5687e4gf397g446cga038ge172753d065a
+LLSTATS_HealingDone_DisplayName	Total Healing	h6f1ac51dg1246g4e1fgb01eg5ff7c1cbdc27
+LLSTATS_HealingDone_Description	The total amount of healing done.	hbdb3a7a3gc8c7g4a1bg9bb0gde3058044526
+LLSTATS_TotalStolen_DisplayName	Stolen Items	h3ac7ba5bg7e42g4c70g8704g11b576cc1588
+LLSTATS_TotalStolen_Description	The total amount of items stolen by this character.	hf2953ad5gca79g4a09gb683gef3ab2905e90
+LLSTATS_TotalCrimes_DisplayName	Crimes	h1b36047fg7b9cg4722g8926ged31f29e31f9
+LLSTATS_TotalCrimes_Description	The total amount of crimes committed by this character.	h3c0dab47g444ag48cdg91d1ge80221c1860e
+LLSTATS_Murders_DisplayName	Murders	h13169c03gf9fbg4ee5g930dg76d7d810e67d
+LLSTATS_Murders_Description	The amount of innocents murdered by this character.	h2b386bf2gde1fg4f21gaa38g8a10b49803b1
+LLSTATS_SoulsEaten_DisplayName	Souls Absorbed	h83f0d9e6g2a2bg4c58g81b8g627a64aed8d4
+LLSTATS_SoulsEaten_Description	Souls absorbed by Source Vampirism, Soul Jars and so on.	hfa953d5cgc83dg43ccg8a65gc1c5c09007ed
+LLSTAT_PathOfBloodFailed	Impure	h4c45ccacg36efg4244g927fgd479e1e12f25

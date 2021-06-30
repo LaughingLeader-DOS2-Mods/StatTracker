@@ -1,0 +1,66 @@
+{
+	"Defaults": {
+		"Stats": {
+			"Create": true,
+			"Category": "GeneralStats",
+			"TooltipType": "Stat",
+			"DisplayValueInTooltip": true
+		}
+	},
+	"Categories" : {
+		"GeneralStats": {
+			"DisplayName": "LLSTATS_GeneralStats_DisplayName",
+			"Description": "LLSTATS_GeneralStats_Description",
+			"ShowAlways" : true,
+			"HideTotalPoints" : true
+		},
+		"Crimes": {
+			"DisplayName": "LLSTATS_CrimeStats_DisplayName",
+			"Description": "LLSTATS_CrimeStats_Description",
+			"ShowAlways" : true,
+			"HideTotalPoints" : true
+		}
+	},
+	"Stats": {
+		"LLSTATS_Kills": {
+			"DisplayName": "LLSTATS_Kills_DisplayName",
+			"Description": "LLSTATS_Kills_Description"
+		},
+		"LLSTATS_Deaths": {
+			"DisplayName": "LLSTATS_Deaths_DisplayName",
+			"Description": "LLSTATS_Deaths_Description"
+		},
+		"LLSTATS_TotalDamage": {
+			"DisplayName": "LLSTATS_TotalDamage_DisplayName",
+			"Description": "LLSTATS_TotalDamage_Description"
+		},
+		"LLSTATS_LargestHit": {
+			"DisplayName": "LLSTATS_LargestHit_DisplayName",
+			"Description": "LLSTATS_LargestHit_Description"
+		},
+		"LLSTATS_HealingDone": {
+			"DisplayName": "LLSTATS_HealingDone_DisplayName",
+			"Description": "LLSTATS_HealingDone_Description"
+		},
+		"LLSTATS_StolenItems": {
+			"DisplayName": "LLSTATS_TotalStolen_DisplayName",
+			"Description": "LLSTATS_TotalStolen_Description",
+			"Category": "Crimes"
+		},
+		"LLSTATS_TotalCrimes": {
+			"DisplayName": "LLSTATS_TotalCrimes_DisplayName",
+			"Description": "LLSTATS_TotalCrimes_Description",
+			"Category": "Crimes"
+		},
+		"LLSTATS_Murders": {
+			"DisplayName": "LLSTATS_Murders_DisplayName",
+			"Description": "LLSTATS_Murders_Description",
+			"Category": "Crimes"
+		},
+		"LLSTATS_SoulsEaten": {
+			"DisplayName": "LLSTATS_SoulsEaten_DisplayName",
+			"Description": "LLSTATS_SoulsEaten_Description",
+			"Category": "Crimes"
+		}
+	}
+}

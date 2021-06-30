@@ -1,0 +1,10 @@
+{
+    "RequiredExtensionVersion": 54,
+    "ModTable": "LLSTATS",
+    "FeatureFlags": [
+        "OsirisExtensions",
+        "Lua",
+        "CustomStats",
+        "CustomStatsPane"
+    ]
+}
