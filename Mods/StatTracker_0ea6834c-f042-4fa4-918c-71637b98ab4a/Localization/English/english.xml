@@ -13,11 +13,12 @@
 	<content contentuid="h83f0d9e6g2a2bg4c58g81b8g627a64aed8d4">Souls Absorbed</content>
 	<content contentuid="h8b5687e4gf397g446cga038ge172753d065a">The most damage dealt in a single hit.</content>
 	<content contentuid="h9523102eg423ag444dga739g54e12bd01d76">Total number of kills made by this character in combat, either directly or or indrectly through summons, surfaces, and so on.</content>
-	<content contentuid="hb1630d06g9258g4c7bg9b3ega4a2f81dc907">Crime-related stats.&lt;br&gt;(&lt;font color=&apos;#77FF33&apos;&gt;Stat Tracker&lt;/font&gt;).</content>
+	<content contentuid="hb1630d06g9258g4c7bg9b3ega4a2f81dc907">Crime-related stats.&lt;br&gt;[Key:LLSTATS_ModDisplayName]</content>
 	<content contentuid="hbdb3a7a3gc8c7g4a1bg9bb0gde3058044526">The total amount of healing done.</content>
 	<content contentuid="hbf890470g5217g43a4ga723g62156f51cfa4">Crimes</content>
-	<content contentuid="hd4458c6cg0344g4131gb180g41f8c8b838fe">Various general stats (combat, stealing, etc).&lt;br&gt;(&lt;font color=&apos;#77FF33&apos;&gt;Stat Tracker&lt;/font&gt;).</content>
+	<content contentuid="hd4458c6cg0344g4131gb180g41f8c8b838fe">Various general stats (combat, stealing, etc).&lt;br&gt;[Key:LLSTATS_ModDisplayName]</content>
 	<content contentuid="hdb8f4cebg4a12g4865g96aeg34b8f8afe0d0">Largest Single Hit</content>
+	<content contentuid="hef87d262g3cbbg4321g8578gba9b98864cfc">&lt;font color=&apos;#77FF33&apos;&gt;Stat Tracker&lt;/font&gt;</content>
 	<content contentuid="hf2953ad5gca79g4a09gb683gef3ab2905e90">The total amount of items stolen by this character.</content>
 	<content contentuid="hfa953d5cgc83dg43ccg8a65gc1c5c09007ed">Souls absorbed by [Handle:he9ea09a6g7fd8g4115g975bgc9eba2e67eb7:Source Vampirism] or from a [Handle:h8a638e05g5cfdg4bcbga33bg1e0ed7b546dc:Soul Jar].</content>
 </contentList>

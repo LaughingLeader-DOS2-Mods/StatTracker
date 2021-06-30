@@ -21,7 +21,7 @@
                     <attribute id="CharacterCreationLevelName" value="" type="22" />
                     <attribute id="Description" value="" type="30" />
                     <attribute id="DescriptionName" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
-                    <attribute id="DisplayName" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
+                    <attribute id="DisplayName" value="Stat Tracker" handle="hef87d262g3cbbg4321g8578gba9b98864cfc" type="28" />
                     <attribute id="Folder" value="StatTracker_0ea6834c-f042-4fa4-918c-71637b98ab4a" type="30" />
                     <attribute id="GMTemplate" value="" type="22" />
                     <attribute id="LobbyLevelName" value="" type="22" />

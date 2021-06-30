@@ -1,8 +1,9 @@
 Key	Content	Handle
+LLSTATS_ModDisplayName	<font color='#77FF33'>Stat Tracker</font>	hef87d262g3cbbg4321g8578gba9b98864cfc
 LLSTATS_GeneralStats_DisplayName	General	h124117afgc73cg4695g8c47g8e117934d624
-LLSTATS_GeneralStats_Description	Various general stats (combat, stealing, etc).<br>(<font color='#77FF33'>Stat Tracker</font>).	hd4458c6cg0344g4131gb180g41f8c8b838fe
+LLSTATS_GeneralStats_Description	Various general stats (combat, stealing, etc).<br>[Key:LLSTATS_ModDisplayName]	hd4458c6cg0344g4131gb180g41f8c8b838fe
 LLSTATS_CrimeStats_DisplayName	Crimes	hbf890470g5217g43a4ga723g62156f51cfa4
-LLSTATS_CrimeStats_Description	Crime-related stats.<br>(<font color='#77FF33'>Stat Tracker</font>).	hb1630d06g9258g4c7bg9b3ega4a2f81dc907
+LLSTATS_CrimeStats_Description	Crime-related stats.<br>[Key:LLSTATS_ModDisplayName]	hb1630d06g9258g4c7bg9b3ega4a2f81dc907
 LLSTATS_Kills_DisplayName	Kills	h7993e96dg04e4g4915gbe6dg4b15f2f0e807
 LLSTATS_Kills_Description	Total number of kills made by this character in combat, either directly or or indrectly through summons, surfaces, and so on.	h9523102eg423ag444dga739g54e12bd01d76
 LLSTATS_Deaths_DisplayName	Deaths	h6948915cg76c9g49aeg8d00g104dbec16176
