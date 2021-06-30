@@ -20,5 +20,5 @@ LLSTATS_TotalCrimes_Description	The total amount of crimes committed by this cha
 LLSTATS_Murders_DisplayName	Murders	h13169c03gf9fbg4ee5g930dg76d7d810e67d
 LLSTATS_Murders_Description	The amount of innocents murdered by this character.	h2b386bf2gde1fg4f21gaa38g8a10b49803b1
 LLSTATS_SoulsEaten_DisplayName	Souls Absorbed	h83f0d9e6g2a2bg4c58g81b8g627a64aed8d4
-LLSTATS_SoulsEaten_Description	Souls absorbed by Source Vampirism, Soul Jars and so on.	hfa953d5cgc83dg43ccg8a65gc1c5c09007ed
+LLSTATS_SoulsEaten_Description	Souls absorbed by [Handle:he9ea09a6g7fd8g4115g975bgc9eba2e67eb7:Source Vampirism] or from a [Handle:h8a638e05g5cfdg4bcbga33bg1e0ed7b546dc:Soul Jar].	hfa953d5cgc83dg43ccg8a65gc1c5c09007ed
 LLSTAT_PathOfBloodFailed	Impure	h4c45ccacg36efg4244g927fgd479e1e12f25
