@@ -19,7 +19,7 @@
                 <node id="ModuleInfo">
                     <attribute id="Author" value="LaughingLeader" type="30" />
                     <attribute id="CharacterCreationLevelName" value="" type="22" />
-                    <attribute id="Description" value="" type="30" />
+                    <attribute id="Description" value="Adds various stats to the Extra Stats tab that tracks data such as crimes and combat stats." type="30" />
                     <attribute id="DescriptionName" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
                     <attribute id="DisplayName" value="Stat Tracker" handle="hef87d262g3cbbg4321g8578gba9b98864cfc" type="28" />
                     <attribute id="Folder" value="StatTracker_0ea6834c-f042-4fa4-918c-71637b98ab4a" type="30" />
@@ -31,7 +31,7 @@
                     <attribute id="NumPlayers" value="2" type="1" />
                     <attribute id="PhotoBooth" value="" type="22" />
                     <attribute id="StartupLevelName" value="" type="22" />
-                    <attribute id="Tags" value="" type="30" />
+                    <attribute id="Tags" value="Extra Stats" type="30" />
                     <attribute id="Type" value="Add-on" type="22" />
                     <attribute id="UUID" value="0ea6834c-f042-4fa4-918c-71637b98ab4a" type="22" />
                     <attribute id="Version" value="268435456" type="4" />
