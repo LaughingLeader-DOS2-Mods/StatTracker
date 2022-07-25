@@ -1,13 +1,12 @@
 {
 	"Defaults": {
-		"Stats": {
-			"Create": true,
+		"CustomStats": {
 			"Category": "GeneralStats",
 			"TooltipType": "Stat",
 			"DisplayValueInTooltip": true
 		}
 	},
-	"Categories" : {
+	"CustomStatCategories" : {
 		"GeneralStats": {
 			"DisplayName": "LLSTATS_GeneralStats_DisplayName",
 			"Description": "LLSTATS_GeneralStats_Description",
@@ -21,7 +20,7 @@
 			"HideTotalPoints" : true
 		}
 	},
-	"Stats": {
+	"CustomStats": {
 		"LLSTATS_Kills": {
 			"DisplayName": "LLSTATS_Kills_DisplayName",
 			"Description": "LLSTATS_Kills_Description"

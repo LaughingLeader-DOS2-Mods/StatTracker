@@ -13,8 +13,8 @@ local function IsPure(uuid)
 	return true
 end
 
-local registeredListeners = false
-local function registerListeners()
+local _registeredListeners = false
+local function RegisterPobListeners()
 	Ext.RegisterOsirisListener("ObjectFlagSet", 3, "after", function(flag, object, instance)
 		if PathOfBloodFlags[flag] then
 			SetTag(object, "LLSTAT_PathOfBloodFailed")
@@ -30,21 +30,23 @@ local function registerListeners()
 	end)
 
 	Ext.RegisterOsirisListener("Proc_AbsorbedSoulJar", 2, "after", function(player, jar)
-		CustomStatSystem:ModifyStat(player, ID.SoulsEaten, 1)
+		SheetManager:ModifyValueByID(StringHelpers.GetUUID(player), ID.SoulsEaten, 1, ModuleUUID, "Custom")
 	end)
 	
 	Ext.RegisterOsirisListener("PROC_GLO_SystemicTags_CheckSourceSucking", 1, "after", function(player)
-		CustomStatSystem:ModifyStat(player, ID.SoulsEaten, 1)
+		SheetManager:ModifyValueByID(StringHelpers.GetUUID(player), ID.SoulsEaten, 1, ModuleUUID, "Custom")
 	end)
 
-	registeredListeners = true
+	_registeredListeners = true
 end
 
-local OriginsId = "1301db3d-1f54-4e98-9be5-5094030916e4"
+local MOD_ORIGINS = "1301db3d-1f54-4e98-9be5-5094030916e4"
 
-RegisterListener("Initialized", function()
-	if Ext.IsModLoaded(OriginsId) and not registeredListeners then
-		registerListeners()
+Events.Initialized:Subscribe(function(e)
+	if Ext.IsModLoaded(MOD_ORIGINS) then
+		if not _registeredListeners then
+			RegisterPobListeners()
+		end
 		for player in GameHelpers.Character.GetPlayers() do
 			if IsPure(player.MyGuid) then
 				ClearTag(player.MyGuid, "LLSTAT_PathOfBloodFailed")
@@ -54,3 +56,4 @@ RegisterListener("Initialized", function()
 		end
 	end
 end)
+
