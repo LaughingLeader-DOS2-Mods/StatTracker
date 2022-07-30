@@ -55,7 +55,7 @@ local IgnoreCrimes = {
 
 Ext.RegisterOsirisListener("CharacterStoleItem", Data.OsirisEvents.CharacterStoleItem, "after", function(character, item, x, y, z, victim, container, amount)
 	if amount > 0 and GameHelpers.Character.IsPlayer(character) then
-		SheetManager.CustomStats:ModifyStat(character, ID.StolenItems, amount, ModuleUUID)
+		SheetManager:ModifyValueByID(character, ID.StolenItems, amount, ModuleUUID, "Custom")
 	end
 end)
 
@@ -65,9 +65,9 @@ Ext.RegisterOsirisListener("CrimeIsRegistered", Data.OsirisEvents.CrimeIsRegiste
 		if #criminals > 0 then
 			for _,uuid in pairs(criminals) do
 				if not StringHelpers.IsNullOrEmpty(uuid) and GameHelpers.Character.IsPlayer(uuid) then
-					SheetManager.CustomStats:ModifyStat(uuid, ID.TotalCrimes, 1, ModuleUUID)
+					SheetManager:ModifyValueByID(uuid, ID.TotalCrimes, 1, ModuleUUID, "Custom")
 					if MurderCrimes[crimeType] then
-						SheetManager.CustomStats:ModifyStat(uuid, ID.Murders, 1, ModuleUUID)
+						SheetManager:ModifyValueByID(uuid, ID.Murders, 1, ModuleUUID, "Custom")
 					end
 				end
 			end

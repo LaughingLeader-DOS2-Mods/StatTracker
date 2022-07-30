@@ -10,4 +10,6 @@ ID = {
 	SoulsEaten = "LLSTATS_SoulsEaten",
 }
 
+MOD_ORIGINS = "1301db3d-1f54-4e98-9be5-5094030916e4"
+
 Ext.Require("Shared/PointListeners.lua")

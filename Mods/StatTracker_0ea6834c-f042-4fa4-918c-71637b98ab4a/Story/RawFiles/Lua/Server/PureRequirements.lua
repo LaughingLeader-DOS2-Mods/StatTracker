@@ -40,8 +40,6 @@ local function RegisterPobListeners()
 	_registeredListeners = true
 end
 
-local MOD_ORIGINS = "1301db3d-1f54-4e98-9be5-5094030916e4"
-
 Events.Initialized:Subscribe(function(e)
 	if Ext.IsModLoaded(MOD_ORIGINS) then
 		if not _registeredListeners then
