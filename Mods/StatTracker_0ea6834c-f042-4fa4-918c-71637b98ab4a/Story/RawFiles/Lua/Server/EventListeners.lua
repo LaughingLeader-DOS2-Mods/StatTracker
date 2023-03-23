@@ -12,10 +12,10 @@ end)
 
 --Low priority, in case a mod modifies the heal amount
 Events.OnHeal:Subscribe(function (e)
-	if e.Heal.HealAmount > 0 and GameHelpers.Character.IsPlayer(e.Source) then
-		SheetManager:ModifyValueByID(e.Source, ID.HealingDone, e.Heal.HealAmount, ModuleUUID, "Custom")
+	if e.Status.HealAmount > 0 and GameHelpers.Character.IsPlayer(e.Source) then
+		SheetManager:ModifyValueByID(e.Source, ID.HealingDone, e.Status.HealAmount, ModuleUUID, "Custom")
 	end
-end, {Priority=1})
+end, {Priority=1, MatchArgs={StatusType="HEAL"}})
 
 local hitSource = {}
 
