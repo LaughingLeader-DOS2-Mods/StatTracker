@@ -6,7 +6,7 @@ local PathOfBloodFlags = {
 }
 local function IsPure(uuid)
 	for flag,_ in pairs(PathOfBloodFlags) do
-		if ObjectGetFlag(uuid,flag) == 1 then
+		if Osi.ObjectGetFlag(uuid,flag) == 1 then
 			return false
 		end
 	end
@@ -15,41 +15,41 @@ end
 
 local _registeredListeners = false
 local function RegisterPobListeners()
-	Ext.RegisterOsirisListener("ObjectFlagSet", 3, "after", function(flag, object, instance)
-		if PathOfBloodFlags[flag] then
-			SetTag(object, "LLSTAT_PathOfBloodFailed")
+	Events.Osiris.ObjectFlagSet:Subscribe(function(e)
+		if PathOfBloodFlags[e.Flag] then
+			Osi.SetTag(e.ObjectGUID, "LLSTAT_PathOfBloodFailed")
 		end
 	end)
-	
-	Ext.RegisterOsirisListener("ObjectFlagCleared", 3, "after", function(flag, object, instance)
-		if PathOfBloodFlags[flag] then
-			if IsPure(object) then
-				ClearTag(object, "LLSTAT_PathOfBloodFailed")
+
+	Events.Osiris.ObjectFlagCleared:Subscribe(function(e)
+		if PathOfBloodFlags[e.Flag] then
+			if IsPure(e.ObjectGUID) then
+				Osi.ClearTag(e.ObjectGUID, "LLSTAT_PathOfBloodFailed")
 			end
 		end
 	end)
 
-	Ext.RegisterOsirisListener("Proc_AbsorbedSoulJar", 2, "after", function(player, jar)
-		SheetManager:ModifyValueByID(StringHelpers.GetUUID(player), ID.SoulsEaten, 1, ModuleUUID, "Custom")
+	Ext.Osiris.RegisterListener("Proc_AbsorbedSoulJar", 2, "after", function(player, jar)
+		SheetManager:ModifyValueByID(GameHelpers.GetCharacter(player), ID.SoulsEaten, 1, ModuleUUID, "Custom")
 	end)
 	
-	Ext.RegisterOsirisListener("PROC_GLO_SystemicTags_CheckSourceSucking", 1, "after", function(player)
-		SheetManager:ModifyValueByID(StringHelpers.GetUUID(player), ID.SoulsEaten, 1, ModuleUUID, "Custom")
+	Ext.Osiris.RegisterListener("PROC_GLO_SystemicTags_CheckSourceSucking", 1, "after", function(player)
+		SheetManager:ModifyValueByID(GameHelpers.GetCharacter(player), ID.SoulsEaten, 1, ModuleUUID, "Custom")
 	end)
 
 	_registeredListeners = true
 end
 
 Events.Initialized:Subscribe(function(e)
-	if Ext.IsModLoaded(MOD_ORIGINS) then
+	if Ext.Mod.IsModLoaded(MOD_ORIGINS) then
 		if not _registeredListeners then
 			RegisterPobListeners()
 		end
 		for player in GameHelpers.Character.GetPlayers() do
 			if IsPure(player.MyGuid) then
-				ClearTag(player.MyGuid, "LLSTAT_PathOfBloodFailed")
+				Osi.ClearTag(player.MyGuid, "LLSTAT_PathOfBloodFailed")
 			elseif not player:HasTag("LLSTAT_PathOfBloodFailed") then
-				SetTag(player.MyGuid, "LLSTAT_PathOfBloodFailed")
+				Osi.SetTag(player.MyGuid, "LLSTAT_PathOfBloodFailed")
 			end
 		end
 	end

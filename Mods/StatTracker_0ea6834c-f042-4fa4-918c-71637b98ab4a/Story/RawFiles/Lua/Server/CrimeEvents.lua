@@ -53,22 +53,19 @@ local IgnoreCrimes = {
 	WeaponsDrawn = true,
 }
 
-Ext.RegisterOsirisListener("CharacterStoleItem", Data.OsirisEvents.CharacterStoleItem, "after", function(character, item, x, y, z, victim, container, amount)
-	if amount > 0 and GameHelpers.Character.IsPlayer(character) then
-		SheetManager:ModifyValueByID(character, ID.StolenItems, amount, ModuleUUID, "Custom")
+Events.Osiris.CharacterStoleItem:Subscribe(function (e)
+	if e.Amount > 0 and GameHelpers.Character.IsPlayer(e.Character) then
+		SheetManager:ModifyValueByID(e.Character, ID.StolenItems, e.Amount, ModuleUUID, "Custom")
 	end
 end)
 
-Ext.RegisterOsirisListener("CrimeIsRegistered", Data.OsirisEvents.CrimeIsRegistered, "after", function(victim, crimeType, crimeId, evidence, ...)
-	if not IgnoreCrimes[crimeType] then
-		local criminals = {...}
-		if #criminals > 0 then
-			for _,uuid in pairs(criminals) do
-				if not StringHelpers.IsNullOrEmpty(uuid) and GameHelpers.Character.IsPlayer(uuid) then
-					SheetManager:ModifyValueByID(uuid, ID.TotalCrimes, 1, ModuleUUID, "Custom")
-					if MurderCrimes[crimeType] then
-						SheetManager:ModifyValueByID(uuid, ID.Murders, 1, ModuleUUID, "Custom")
-					end
+Events.Osiris.CrimeIsRegistered:Subscribe(function (e)
+	if not IgnoreCrimes[e.CrimeType] then
+		for _,v in pairs(e.Criminals) do
+			if GameHelpers.Character.IsPlayer(v) then
+				SheetManager:ModifyValueByID(v, ID.TotalCrimes, 1, ModuleUUID, "Custom")
+				if MurderCrimes[e.CrimeType] then
+					SheetManager:ModifyValueByID(v, ID.Murders, 1, ModuleUUID, "Custom")
 				end
 			end
 		end

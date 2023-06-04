@@ -1,14 +1,14 @@
-RegisterProtectedOsirisListener("CharacterKilledBy", Data.OsirisEvents.CharacterKilledBy, "after", function(defender, owner, attacker)
-	if GameHelpers.Character.IsPlayer(owner) then
-		SheetManager:ModifyValueByID(owner, ID.Kills, 1, ModuleUUID, "Custom")
+Events.Osiris.CharacterKilledBy:Subscribe(function (e)
+	if GameHelpers.Character.IsPlayer(e.Attacker) and e.Defender.OwnerHandle ~= e.AttackerOwner.Handle then
+		SheetManager:ModifyValueByID(e.Attacker, ID.Kills, 1, ModuleUUID, "Custom")
 	end
 end)
 
-RegisterProtectedOsirisListener("CharacterDied", Data.OsirisEvents.CharacterDied, "after", function(character)
-	if GameHelpers.Character.IsPlayer(character) then
-		SheetManager:ModifyValueByID(character, ID.Deaths, 1, ModuleUUID, "Custom")
+Events.CharacterDied:Subscribe(function (e)
+	if GameHelpers.Character.IsPlayer(e.Character) then
+		SheetManager:ModifyValueByID(e.Character, ID.Deaths, 1, ModuleUUID, "Custom")
 	end
-end)
+end, {MatchArgs={State="Died"}})
 
 --Low priority, in case a mod modifies the heal amount
 Events.OnHeal:Subscribe(function (e)
